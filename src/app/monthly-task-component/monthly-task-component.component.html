@@ -1,0 +1,26 @@
+@for(module of taskList;track module.id){
+<section class="table" style="width: 100%">
+  <h3 style="text-align: center">Tasks: {{ module.name }}</h3>
+  <table [border]="1" style="width: 100%">
+    <thead>
+      <tr>
+        <th style="width: 10%">Date</th>
+        <th style="width: 30%">Topic Learned</th>
+        <th style="width: 30%">Task Assingned</th>
+        <th style="width: 30%">Remarks</th>
+      </tr>
+    </thead>
+    @for(task of module.tasks;track task.id){
+    <tbody>
+      <tr>
+        <td>{{ task.date }}</td>
+        <td>{{ task.topicLearned }}</td>
+        <td>{{ task.taskAssigned }}</td>
+        <td>{{ task.remarks }}</td>
+      </tr>
+    </tbody>
+    }
+  </table>
+  <br />
+</section>
+}

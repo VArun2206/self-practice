@@ -1,25 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { MonthlyTaskComponentComponent } from './monthly-task-component/monthly-task-component.component';
-import { LoremContentComponent } from './lorem-content/lorem-content.component';
-import { HeaderComponent } from './header/header.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-monthly-task-component',
   standalone: true,
-  imports: [
-    RouterOutlet,
-    CommonModule,
-    MonthlyTaskComponentComponent,
-    LoremContentComponent,
-    HeaderComponent,
-  ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  imports: [CommonModule],
+  templateUrl: './monthly-task-component.component.html',
+  styleUrl: './monthly-task-component.component.css',
 })
-export class AppComponent {
-  title = 'angular-project';
+export class MonthlyTaskComponentComponent {
   taskList = [
     {
       id: 1,
